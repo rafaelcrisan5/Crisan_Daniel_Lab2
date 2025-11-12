@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Crisan_Daniel_Lab2.Data;
 using Crisan_Daniel_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Crisan_Daniel_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : BookCategoriesPageModel
     {
         private readonly Crisan_Daniel_Lab2.Data.Crisan_Daniel_Lab2Context _context;
